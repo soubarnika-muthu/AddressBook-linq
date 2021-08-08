@@ -5,7 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace AddressBookLinq
-{ //create contact details 
+{
+    //create contact details 
     public class ContactDetails
     {
         public int personId { get; set; }
@@ -17,7 +18,6 @@ namespace AddressBookLinq
         public long zipCode { get; set; }
         public long phoneNumber { get; set; }
         public string emailAddress { get; set; }
-        public string type { get; set; }
-        public string adrsBookName { get; set; }
+
     }
 }

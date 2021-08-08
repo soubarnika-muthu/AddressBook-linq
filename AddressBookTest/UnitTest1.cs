@@ -20,5 +20,14 @@ namespace AddressBookTest
             int actual = addressBook.InsertIntoAddressBook(new ContactDetails());
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        public void EditCOntactTest()
+        {
+            int expected = 1;
+            addressBook.AddAddresss();
+            int actual = addressBook.EditContact(2, "tim", 87637489502);
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
