@@ -57,5 +57,15 @@ namespace AddressBookTest
             string actual = addressBook.CountOfList();
             Assert.AreEqual(expected, actual);
         }
+
+        //UC7-Sorting of list
+        [TestMethod]
+        public void CSortingOfList()
+        {
+            string expected = "mohan shanthi ";
+            addressBook.AddAddresss();
+            string actual = addressBook.SortingOfList("madurai");
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
