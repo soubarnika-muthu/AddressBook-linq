@@ -26,7 +26,7 @@ namespace AddressBookTest
         {
             int expected = 1;
             addressBook.AddAddresss();
-            int actual = addressBook.EditContact(2, "tim", 87637489502);
+            int actual = addressBook.EditContact(2, "shanthi", 87637489502);
             Assert.AreEqual(expected, actual);
         }
 
@@ -36,6 +36,15 @@ namespace AddressBookTest
             int expected = 1;
             addressBook.AddAddresss();
             int actual = addressBook.DeleteContact(2);
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void RetrivalBaseonCityOrStateTest()
+        {
+            string expected = "shanthi mohan vetri ";
+            addressBook.AddAddresss();
+            string actual = addressBook.RetriveOnCityOrState("madurai", "TamilNadu");
             Assert.AreEqual(expected, actual);
         }
     }
