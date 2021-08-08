@@ -79,5 +79,17 @@ namespace AddressBookLinq
             }
             return result;
         }
+
+        //UC7-Count the contact from list
+        public string CountOfList()
+        {
+            string result = "";
+            var res = address.GroupBy(x => x.city).Select(x => new { personId = x.Key, count = x.Count() });
+            foreach (var r in res)
+            {
+                result += "" + r.personId + " " + r.count + " ";
+            }
+            return result;
+        }
     }
 }
