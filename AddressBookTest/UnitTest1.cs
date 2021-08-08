@@ -58,13 +58,23 @@ namespace AddressBookTest
             Assert.AreEqual(expected, actual);
         }
 
-        //UC7-Sorting of list
+        //UC8-Sorting of list
         [TestMethod]
         public void CSortingOfList()
         {
             string expected = "mohan shanthi ";
             addressBook.AddAddresss();
             string actual = addressBook.SortingOfList("madurai");
+            Assert.AreEqual(expected, actual);
+        }
+
+        // //UC10-Count by type
+        [TestMethod]
+        public void CountBaseonType()
+        {
+            string expected = "friends 3 profession 1 family 2 ";
+            addressBook.AddAddresss();
+            string actual = addressBook.CountOfListByType();
             Assert.AreEqual(expected, actual);
         }
     }

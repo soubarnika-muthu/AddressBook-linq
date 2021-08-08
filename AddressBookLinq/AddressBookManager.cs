@@ -103,5 +103,16 @@ namespace AddressBookLinq
             }
             return result;
         }
+
+        public string CountOfListByType()
+        {
+            string result = "";
+            var res = address.GroupBy(x => x.type).Select(x => new { personId = x.Key, count = x.Count() });
+            foreach (var r in res)
+            {
+                result += "" + r.personId + " " + r.count + " ";
+            }
+            return result;
+        }
     }
 }
