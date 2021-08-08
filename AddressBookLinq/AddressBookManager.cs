@@ -53,5 +53,20 @@ namespace AddressBookLinq
                 return 1;
             }
         }
+
+        //UC5-Deteling the contact from list
+        public int DeleteContact(int personid)
+        {
+            ContactDetails contact = (from add in address where add.personId == personid select add).First();
+            if (contact == null)
+            {
+                return 0;
+            }
+            else
+            {
+                address.Remove(contact);
+                return 1;
+            }
+        }
     }
 }
