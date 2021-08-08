@@ -11,6 +11,8 @@ namespace AddressBookLinq
         static void Main(string[] args)
         {
             Console.WriteLine("Executing AddressBook using linq");
+            Console.Read();
         }
+        
     }
 }
